@@ -29,6 +29,9 @@ ol {
 }
 
 button {
+  display: block;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -42,12 +45,17 @@ a {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
-body {
-  display: block;
-  margin: 0px;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
@@ -57,14 +65,14 @@ body {
 
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .link {
@@ -80,7 +88,7 @@ body {
 /*------header------------*/
 
 .header {
-  border: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px #ececec;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -97,7 +105,6 @@ body {
 }
 
 .header-logo {
-  margin-left: auto;
   margin-right: 93px;
   font-family: 'Raleway';
   font-style: normal;
@@ -118,6 +125,10 @@ body {
   align-items: center;
 }
 
+.header-addres-list {
+  margin-right: 50px;
+}
+
 .header-link {
   font-weight: 500;
   line-height: 1.14;
@@ -130,7 +141,6 @@ body {
 }
 
 .header-mail {
-  margin-right: 50px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -147,7 +157,6 @@ body {
 /*---------hero----------*/
 
 .hero {
-  display: block;
   background-color: var(--footer-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -156,7 +165,7 @@ body {
 
 .hero-title {
   text-align: center;
-  max-width: 696px;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -164,27 +173,28 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
-  margin: auto;
+  margin: 0 auto;
 }
 
 .hero-btn {
   display: inline-block;
-  margin-top: 50px;
-  width: 216px;
+  margin-top: 30px;
+  min-width: 216px;
   height: 50px;
   top: 430px;
   left: 692px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.88;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
   color: var(--white-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
+  padding: 10px 32px;
 }
 
 .hero-btn:hover,
@@ -196,10 +206,12 @@ body {
 
 /*------------переваги--------*/
 
+.about-list {
+  display: flex;
+}
+
 .about-container {
   display: flex;
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 
 .visually-hidden {
@@ -240,8 +252,9 @@ body {
 /*------work-----*/
 
 .work {
-  margin-bottom: 94px;
-  background-color: var(--white-background-color);
+  padding-top: 0;
+  /* margin-bottom: 94px;
+  background-color: var(--white-background-color); */
 }
 
 .work-title {
@@ -255,11 +268,29 @@ body {
 }
 
 .work-list {
+  justify-content: center;
   display: flex;
   gap: 30px;
 }
 
 /*------team------*/
+
+.team-item {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  /* box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12); */
+  /* border-radius: 0px 0px 4px 4px;
+  flex-direction: column;
+  display: flex;
+  background-color: var(--white-background-color); */
+}
 
 .team {
   padding-top: 94px;
@@ -278,7 +309,7 @@ body {
 }
 
 .team-name {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -289,10 +320,10 @@ body {
 }
 
 .team-txt {
-  justify-content: center;
+  /* justify-content: center;
   display: inline-flex;
   padding-bottom: 30px;
-  font-weight: 400;
+  font-weight: 400; */
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -305,24 +336,20 @@ body {
   display: flex;
 }
 
-.team-container {
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  border-radius: 0px 0px 4px 4px;
-  flex-direction: column;
-  display: flex;
-  background-color: var(--white-background-color);
-}
-
-.team-name {
+.container-team-txt {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /*---------footer-------*/
 
+.footer-item {
+  margin-bottom: not(: last-child) 9px;
+}
+
 .container-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  /* padding-top: 60px;
+  padding-bottom: 60px; */
 }
 
 .logo-foter-studio {
@@ -330,16 +357,18 @@ body {
 }
 
 .footer-address {
+  margin-top: 20px;
   font-style: normal;
 }
 
 .footer {
+  padding: 60px 0;
   background-color: var(--footer-background-color);
 }
 
 .footer-logo {
-  padding-bottom: 20px;
-  display: flex;
+  /* padding-bottom: 20px; */
+  /* display: flex; */
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -371,20 +400,31 @@ body {
 
 /*--------filter-btn-------*/
 
-.filter {
-  padding-bottom: 94px;
-}
-
-.container-filr-btn {
+.filter-list {
   padding-top: 94px;
   padding-bottom: 50px;
-  gap: 30px;
+  gap: 8px;
   display: flex;
   justify-content: center;
 }
 
+.filter {
+  padding-bottom: 94px;
+}
+
+.filter-item 
+  /* padding-top: 94px;
+  padding-bottom: 50px;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+} */
+
+
+
 .filter-btn {
-  border-radius: 4px 4px 4px 4px;
+  padding: 6px 22px;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -394,7 +434,7 @@ body {
   color: var(--primary-text-color);
   background-color: var(--team-background-color);
   cursor: pointer;
-  border-color: transparent;
+  border: none;
 }
 
 .filter-btn:hover {
@@ -403,6 +443,13 @@ body {
 }
 
 /*--------filter-------*/
+
+.projects-list {
+  padding: 0 0 0 0;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+}
 
 .progects-list-container {
   flex-wrap: wrap;
@@ -413,9 +460,7 @@ body {
 
 .container-projects {
   margin: 0%;
-
   flex-wrap: wrap;
-
   border: 1px solid rgba(238, 238, 238, 1);
   display: flex;
   flex-direction: column;
@@ -427,9 +472,9 @@ body {
 } */
 
 .projects-titel {
-  padding-left: 24px;
-  padding-top: 20px;
-  padding-bottom: 4px;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -438,8 +483,8 @@ body {
 }
 
 .projects-txt {
-  padding-left: 24px;
-  padding-bottom: 20px;
+  margin-left: 24px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
