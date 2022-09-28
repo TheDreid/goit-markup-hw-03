@@ -344,7 +344,7 @@ img {
 /*---------footer-------*/
 
 .footer-item {
-  margin-bottom: not(: last-child) 9px;
+  margin-bottom: not(last-child) 9px;
 }
 
 .container-footer {
